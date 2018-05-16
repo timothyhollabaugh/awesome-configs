@@ -1,0 +1,171 @@
+Alacritty;/usr/share/icons/Paper/48x48/apps/utilities-terminal.png;alacritty
+Firefox Nightly;/usr/share/icons/hicolor/48x48/apps/firefox-nightly.png;env MOZ_USE_XINPUT2=1 firefox-nightly --class=FirefoxNightly
+Thunderbird (Nightly);/usr/share/icons/hicolor/48x48/apps/thunderbird-nightly.png;thunderbird-nightly
+Write Stylus;/usr/share/icons/Paper/48x48/devices/input-tablet.png;/usr/bin/write_stylus
+Rhythmbox;/usr/share/icons/hicolor/48x48/apps/rhythmbox.png;rhythmbox
+​;;true
+​;;true
+​;;true
+​;;true
+​;;true
+;;
+Advanced REST client;/home/tim/.local/share/icons/hicolor/48x48/apps/chrome-hgmloofddffdnphfgcellkdfbfbjeloo-Default.png;/usr/bin/chromium --profile-directory=Default --app-id=hgmloofddffdnphfgcellkdfbfbjeloo
+Alacritty;/home/tim/.icons/Tim-Paper/48x48/apps/utilities-terminal.png;alacritty
+Android Studio;/usr/share/pixmaps/android-studio.png;android-studio
+Antergos Welcome;/usr/share/xlunch/svgicons/gtk-info.png;antergos-welcome
+Archive Manager;/usr/share/icons/hicolor/48x48/apps/file-roller.png;file-roller
+Arduino IDE;/usr/share/icons/hicolor/48x48/apps/arduino.png;arduino
+Arronax;/usr/share/arronax/icons/arronax.png;arronax
+Avahi SSH Server Browser;/usr/share/xlunch/svgicons/network-wired.png;/usr/bin/bssh
+Avahi VNC Server Browser;/usr/share/xlunch/svgicons/network-wired.png;/usr/bin/bvnc
+Avahi Zeroconf Browser;/usr/share/xlunch/svgicons/network-wired.png;/usr/bin/avahi-discover
+Backups;/usr/share/icons/hicolor/48x48/apps/org.gnome.DejaDup.png;deja-dup
+bCNC;/usr/share/pixmaps/bcnc.png;bCNC
+Betaflight - Configurator;/home/tim/.local/share/icons/hicolor/128x128/apps/chrome-kdaghagfopacdngbohiknlhcocjccjao-Default.png;/usr/bin/chromium --profile-directory=Default --app-id=kdaghagfopacdngbohiknlhcocjccjao
+Bitmap to Component Converter;/usr/share/icons/hicolor/48x48/apps/bitmap2component.png;bitmap2component
+BLHeli - Configurator;/home/tim/.local/share/icons/hicolor/128x128/apps/chrome-mejfjggmbnocnfibbibmoogocnjbcjnk-Default.png;/usr/bin/chromium --profile-directory=Default --app-id=mejfjggmbnocnfibbibmoogocnjbcjnk
+Bluetooth Adapters;/usr/share/xlunch/svgicons/blueman-device.png;blueman-adapters
+Bluetooth Manager;/usr/share/icons/hicolor/48x48/status/blueman.png
+Brasero;/usr/share/icons/hicolor/48x48/apps/brasero.png;brasero
+Builder;/usr/share/icons/hicolor/48x48/apps/org.gnome.Builder.png;gnome-builder
+Calculator;/home/tim/.icons/Tim-Paper/48x48/apps/accessories-calculator.png;gnome-calculator
+Calendar;/usr/share/icons/hicolor/48x48/apps/org.gnome.Calendar.png;gnome-calendar
+CellWriter;/usr/share/xlunch/svgicons/cellwriter.png;cellwriter
+Character Map;/home/tim/.icons/Tim-Paper/48x48/apps/accessories-character-map.png;gucharmap
+Cheese;/usr/share/icons/hicolor/48x48/apps/org.gnome.Cheese.png;cheese
+Chromium;/usr/share/icons/hicolor/48x48/apps/chromium.png;/usr/bin/chromium
+Cleanflight - Configurator;/home/tim/.local/share/icons/hicolor/128x128/apps/chrome-enacoimjcgeinfnnnpajinjgmkahmfgb-Default.png;chromium --profile-directory=Default --app-id=enacoimjcgeinfnnnpajinjgmkahmfgb
+CMake;/usr/share/icons/hicolor/128x128/apps/CMakeSetup.png;cmake-gui
+Color Profile Viewer;/usr/share/icons/hicolor/48x48/apps/gnome-color-manager.png;gcm-viewer
+Component Editor;/home/tim/.local/share/icons/hicolor/48x48/apps/6810_CompEdit.0.png;env WINEPREFIX="/home/tim/.wine_diptrace32" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/tim/.wine_diptrace32/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/DipTrace/Component\\ Editor.lnk
+compton;/usr/share/icons/hicolor/48x48/apps/compton.png;compton --xrender-sync-fence
+Cool Retro Term;/usr/share/icons/hicolor/64x64/apps/cool-retro-term.png;cool-retro-term
+Cura;/usr/share/icons/hicolor/128x128/apps/cura-icon.png;/usr/bin/cura
+CvPcb;/usr/share/icons/hicolor/48x48/apps/cvpcb.png;cvpcb
+dconf Editor;/usr/share/icons/hicolor/48x48/apps/dconf-editor.png;dconf-editor
+Devhelp;/usr/share/icons/hicolor/48x48/apps/devhelp.png;devhelp
+DipTrace Launcher;/home/tim/.local/share/icons/hicolor/48x48/apps/B5F7_Launcher.0.png;env WINEPREFIX="/home/tim/.wine_diptrace32" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/tim/.wine_diptrace32/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/DipTrace/DipTrace\\ Launcher.lnk
+Discord;/usr/share/pixmaps/discord.png;/usr/bin/discord
+Disks;/usr/share/icons/hicolor/48x48/apps/gnome-disks.png;gnome-disks
+Disk Usage Analyzer;/usr/share/icons/hicolor/48x48/apps/baobab.png;baobab
+Document Viewer;/usr/share/icons/hicolor/48x48/apps/evince.png;evince
+Dolphin Emulator;/usr/share/icons/hicolor/48x48/apps/dolphin-emu.png;dolphin-emu
+Eeschema;/usr/share/icons/hicolor/48x48/apps/eeschema.png;eeschema
+Electron;/usr/share/pixmaps/electron.png;electron
+Evolution;/usr/share/icons/hicolor/48x48/apps/evolution.png;evolution
+Extcalc;/usr/share/icons/extcalc48.png;extcalc
+Files;/usr/share/icons/hicolor/48x48/apps/org.gnome.Nautilus.png;nautilus --new-window
+Firebird Emu;/usr/share/icons/firebird.png;/usr/bin/firebird
+Firefox Nightly;/usr/share/icons/hicolor/48x48/apps/firefox-nightly.png;env MOZ_USE_XINPUT2=1 firefox-nightly --class=FirefoxNightly
+Firefox;/usr/share/icons/hicolor/48x48/apps/firefox.png;/usr/lib/firefox/firefox
+FlatCAM;/usr/share/pixmaps/flatcam.png;flatcam
+Florence Virtual Keyboard;/usr/share/xlunch/svgicons/florence.png;florence
+FLUID;/usr/share/icons/hicolor/48x48/apps/fluid.png;fluid
+FontForge;/usr/share/icons/hicolor/48x48/apps/fontforge.png;fontforge
+Fonts;/usr/share/xlunch/svgicons/preferences-desktop-font.png;gnome-font-viewer
+geisview;/usr/share/pixmaps/geisview32x32.xpm;geisview
+GerbView;/usr/share/icons/hicolor/48x48/apps/gerbview.png;gerbview
+Glade;/usr/share/icons/hicolor/48x48/apps/glade.png;glade
+GNOME System Monitor;/home/tim/.icons/Tim-Paper/48x48/apps/utilities-system-monitor.png;gnome-system-monitor
+GNU Image Manipulation Program;/usr/share/icons/hicolor/48x48/apps/gimp.png;gimp-2.8
+GParted;/usr/share/icons/hicolor/48x48/apps/gparted.png;/usr/bin/gparted
+Gpick;/usr/share/icons/hicolor/48x48/apps/gpick.png;gpick
+GRIP;/opt/GRIP/GRIP.png;/opt/GRIP/GRIP
+Grub Customizer;/usr/share/icons/hicolor/48x48/apps/grub-customizer.png;grub-customizer
+HP Device Manager;/usr/share/hplip/data/images/128x128/hp_logo.png;hp-toolbox
+Htop;/usr/share/pixmaps/htop.png;xterm-256color -e htop
+Image Viewer;/usr/share/icons/hicolor/256x256/apps/eog.png;eog
+Inkscape;/usr/share/icons/hicolor/48x48/apps/inkscape.png;inkscape
+Insomnia;/usr/share/icons/hicolor/48x48/apps/insomnia.png;"/opt/Insomnia/insomnia"
+IntelliJ IDEA Community Edition;/usr/share/intellijidea-ce/bin/idea.png;"/usr/share/intellijidea-ce/bin/idea.sh"
+IntelliJ IDEA Community Edition;/usr/share/pixmaps/idea.png;idea.sh
+ipython2;/usr/share/pixmaps/ipython2.png;xterm-256color -e ipython2
+ipython;/usr/share/pixmaps/ipython.png;xterm-256color -e ipython
+jstest-gtk;/usr/share/icons/jstest-gtk.png;/usr/bin/jstest-gtk
+Julia;/usr/share/xlunch/svgicons/julia.png;xterm-256color -e julia
+KiCad;/usr/share/icons/hicolor/48x48/apps/kicad.png;kicad
+Kirigami Gallery;/usr/share/xlunch/svgicons/preferences-desktop-theme.png;kpackagelauncherqml -a org.kde.kirigami2.gallery
+LibreCAD;/usr/share/icons/hicolor/48x48/apps/librecad.png;librecad
+LibreOffice Base;/usr/share/icons/gnome/48x48/apps/libreoffice-base.png;libreoffice --base
+LibreOffice Calc;/usr/share/icons/gnome/48x48/apps/libreoffice-calc.png;libreoffice --calc
+LibreOffice Draw;/usr/share/icons/gnome/48x48/apps/libreoffice-draw.png;libreoffice --draw
+LibreOffice Impress;/usr/share/icons/gnome/48x48/apps/libreoffice-impress.png;libreoffice --impress
+LibreOffice Math;/usr/share/icons/gnome/48x48/apps/libreoffice-math.png;libreoffice --math
+LibreOffice;/usr/share/icons/gnome/48x48/apps/libreoffice-startcenter.png;libreoffice
+LibreOffice Writer;/usr/share/icons/gnome/48x48/apps/libreoffice-writer.png;libreoffice --writer
+LightDM GTK+ Greeter settings;/usr/share/icons/hicolor/48x48/apps/lightdm-gtk-greeter-settings.png;lightdm-gtk-greeter-settings-pkexec
+Links;/usr/share/pixmaps/links_32x32.xpm;xlinks -g
+Logs;/usr/share/icons/hicolor/48x48/apps/gnome-logs.png;gnome-logs
+Luna Studio;/home/tim/.local/share/icons/hicolor/48x48/apps/luna-studio.png;luna-studio
+Manage Printing;/usr/share/xlunch/svgicons/cups.png;/usr/bin/xdg-open http://localhost:631/
+Maps;/usr/share/icons/hicolor/48x48/apps/org.gnome.Maps.png;gapplication launch org.gnome.Maps
+Music;/usr/share/icons/hicolor/48x48/apps/gnome-music.png;gnome-music
+MyPaint;/usr/share/icons/hicolor/48x48/apps/mypaint.png;mypaint
+Neovim;/usr/share/pixmaps/nvim.png;xterm-256color -e nvim
+Network Connections;/usr/share/xlunch/svgicons/preferences-system-network.png;nm-connection-editor
+NVIDIA X Server Settings;/usr/share/pixmaps/nvidia-settings.png;/usr/bin/nvidia-settings
+Onboard Settings;/usr/share/xlunch/svgicons/onboard.png;onboard-settings
+Onboard;/usr/share/xlunch/svgicons/onboard.png;onboard
+Oni;/usr/share/icons/hicolor/64x64/apps/oni.png;oni
+Openbox Configuration Manager;/usr/share/pixmaps/obconf.png;obconf
+OpenSCAD;/usr/share/pixmaps/openscad.png;openscad
+Passwords and Keys;/usr/share/icons/hicolor/48x48/apps/seahorse.png;/usr/bin/seahorse
+Pattern Editor;/home/tim/.local/share/icons/hicolor/48x48/apps/0102_PattEdit.0.png;env WINEPREFIX="/home/tim/.wine_diptrace32" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/tim/.wine_diptrace32/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/DipTrace/Pattern\\ Editor.lnk
+Pcb Calculator;/usr/share/icons/hicolor/48x48/apps/pcbcalculator.png;pcb_calculator
+PCB Layout;/home/tim/.local/share/icons/hicolor/48x48/apps/2497_pcb.0.png;env WINEPREFIX="/home/tim/.wine_diptrace32" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/tim/.wine_diptrace32/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/DipTrace/PCB\\ Layout.lnk
+Pcbnew;/usr/share/icons/hicolor/48x48/apps/pcbnew.png;pcbnew
+Photos;/usr/share/icons/hicolor/48x48/apps/org.gnome.Photos.png;gnome-photos
+PlayOnLinux;/usr/share/xlunch/svgicons/playonlinux.png;playonlinux
+Print Settings;/usr/share/xlunch/svgicons/printer.png;system-config-printer
+Privilege granting;/usr/share/pixmaps/gksu.png;gksu-properties
+PulseAudio Volume Control;/usr/share/icons/hicolor/48x48/apps/multimedia-volume-control.png;pavucontrol
+Qalculate!;/usr/share/pixmaps/qalculate.png;qalculate-gtk
+Qt4 Assistant ;/usr/share/icons/hicolor/128x128/apps/assistant-qt4.png;assistant-qt4
+Qt4 Designer;/usr/share/icons/hicolor/128x128/apps/designer-qt4.png;designer-qt4
+Qt4 Linguist ;/usr/share/icons/hicolor/48x48/apps/linguist-qt4.png;linguist-qt4
+Qt4 QDbusViewer ;/usr/share/icons/hicolor/128x128/apps/qdbusviewer-qt4.png;qdbusviewer-qt4
+Qt5 Settings;/usr/share/xlunch/svgicons/preferences-desktop-theme.png;qt5ct
+Qt Assistant;/usr/share/icons/hicolor/128x128/apps/assistant.png;assistant
+Qt Designer;/usr/share/icons/hicolor/128x128/apps/QtProject-designer.png;designer
+Qt Linguist;/usr/share/icons/hicolor/48x48/apps/linguist.png;linguist
+Qt QDbusViewer ;/usr/share/icons/hicolor/128x128/apps/qdbusviewer.png;qdbusviewer
+Qt V4L2 test Utility;/usr/share/icons/hicolor/64x64/apps/qv4l2.png;qv4l2
+Quartus II 13.0sp1 (64-bit) Web Edition;/home/tim/Rowan/DigitalSystems/Altera/quartus/adm/quartusii.png;/home/tim/Rowan/DigitalSystems/Altera/quartus/bin/quartus --64bit
+Regenerate entries for xlunch;/usr/share/icons/hicolor/48x48/apps/xlunch.png;xcp=$HOME/.config/xlunch/;xsp=$HOME/.local/share/xlunch;ni=/usr/share/icons/hicolor/48x48/apps/xlunch.png;mkdir -p $xcp && mkdir -p $xsp/svgicons && sh /usr/bin/genentries > $xcp/entries.dsv && ( notify-send -a xlunch -i $ni "Done generating new entries" && mv -f svgicons/* $xsp/svgicons && rm -r svgicons/ && ( cat $xcp/entries.dsv | sed 's|;svgicons\/|;.local/share/xlunch/svgicons/|' > entries2.dsv && mv entries2.dsv $xcp/entries.dsv ) ) || notify-send -a xlunch -i $ni "Error generating new entries"
+Republic Anywhere;/usr/share/republicanywhere/icon.png;republicanywhere
+Rhythmbox;/usr/share/icons/hicolor/48x48/apps/rhythmbox.png;rhythmbox
+Schematic;/home/tim/.local/share/icons/hicolor/48x48/apps/20D5_Schematic.0.png;env WINEPREFIX="/home/tim/.wine_diptrace32" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/tim/.wine_diptrace32/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/DipTrace/Schematic.lnk
+SCIM Input Method;/usr/share/pixmaps/scim-setup.png;scim-setup
+Screensaver;/usr/share/pixmaps/xscreensaver.xpm;xscreensaver-demo
+Screenshot;/home/tim/.icons/Tim-Paper/48x48/apps/applets-screenshooter.png;gnome-screenshot --interactive
+Settings;/usr/share/xlunch/svgicons/preferences-system.png;gnome-control-center --overview
+Simple Scan;/usr/share/xlunch/svgicons/scanner.png;simple-scan
+Slack;/usr/share/pixmaps/slack.png;env LD_PRELOAD=/usr/lib/libcurl.so.3 /usr/bin/slack --disable-gpu
+Slic3r;/opt/Slic3r/var/Slic3r_192px.png;slic3r
+Snes9x;/usr/share/xlunch/svgicons/snes9x.png;snes9x-gtk
+Sound Recorder;/usr/share/icons/hicolor/48x48/apps/gnome-sound-recorder.png;gnome-sound-recorder
+Sysprof;/usr/share/icons/hicolor/48x48/apps/sysprof.png;sysprof
+System Monitor;/home/tim/.icons/Tim-Paper/48x48/apps/utilities-system-monitor.png;gnome-system-monitor
+Terminal;/home/tim/.icons/Tim-Paper/48x48/apps/utilities-terminal.png;gnome-terminal
+Text Editor;/usr/share/icons/hicolor/48x48/apps/gedit.png;gedit
+Thunderbird (Nightly);/usr/share/icons/hicolor/48x48/apps/thunderbird-nightly.png;thunderbird-nightly
+Thunderbird;/usr/share/icons/hicolor/48x48/apps/thunderbird.png;/usr/lib/thunderbird/thunderbird
+Transmission;/usr/share/icons/hicolor/48x48/apps/transmission.png;transmission-gtk
+Turtl;/home/tim/.local/share/icons/hicolor/128x128/apps/turtl.png;/opt/turtl/turtl
+Tutorial;/home/tim/.local/share/icons/hicolor/48x48/apps/0C6B_tutorial.0.png;env WINEPREFIX="/home/tim/.wine_diptrace32" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/tim/.wine_diptrace32/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/DipTrace/Tutorial.lnk
+Tweaks;/usr/share/icons/hicolor/48x48/apps/gnome-tweak-tool.png;gnome-tweak-tool
+Ultimaker Cura;/usr/share/icons/hicolor/128x128/apps/cura-icon.png;/usr/bin/cura
+Uninstall DipTrace;/home/tim/.local/share/icons/hicolor/32x32/apps/21E2_dipfree_en_20100.0.png;env WINEPREFIX="/home/tim/.wine_diptrace32" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/tim/.wine_diptrace32/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/DipTrace/Uninstall\\ DipTrace.lnk
+/usr/share/icons/hicolor/48x48/apps/blueman.png;blueman-manager
+UXTerm;/usr/share/pixmaps/xterm-color_48x48.xpm;uxterm
+Videos;/usr/share/icons/hicolor/48x48/apps/org.gnome.Totem.png;totem
+Vim;/usr/share/icons/hicolor/48x48/apps/gvim.png;xterm-256color -e vim
+Visual Studio Code;/home/tim/.icons/Tim-Paper/48x48/apps/visual-studio-code.png;/usr/bin/code
+VLC media player;/usr/share/icons/hicolor/48x48/apps/vlc.png;/usr/bin/vlc --started-from-file
+Wireshark (GTK+);/usr/share/icons/hicolor/48x48/apps/wireshark.png;wireshark-gtk
+Xournal;/usr/share/xlunch/svgicons/xournal.png;xournal
+XTerm;/usr/share/pixmaps/xterm-color_48x48.xpm;xterm
+Yoshimi;/usr/share/xlunch/svgicons/yoshimi.png;yoshimi
+Zenmap (as root);/usr/share/zenmap/pixmaps/zenmap.png;/usr/share/zenmap/su-to-zenmap.sh
+Zenmap;/usr/share/zenmap/pixmaps/zenmap.png;zenmap
+Zotero;/usr/share/icons/hicolor/48x48/apps/zotero.png;/usr/bin/zotero
