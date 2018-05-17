@@ -59,8 +59,8 @@ beautiful.init("/home/tim/.config/awesome/theme.lua")
 
 awful.spawn.with_shell("/home/tim/.config/awesome/autorun.sh")
 
---terminal = "alacritty"
-terminal = "gnome-terminal"
+terminal = "alacritty"
+--terminal = "gnome-terminal"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
@@ -302,7 +302,19 @@ local battery = lain.widget.bat({
                 battery_icon:set_image("/home/tim/.config/awesome/icons/battery/battery-full-"..status.."symbolic.svg")
             end
 
-            widget:set_markup(bat_now.perc)
+            --[[
+            bat.widget = wibox.widget {
+                { value  = 0.2, color = grad1,
+                widget = wibox.widget.progressbar },
+                { value  = 0.4, color = grad2,
+                widget = wibox.widget.progressbar },
+                { value  = 0.6, color = grad3,
+                widget = wibox.widget.progressbar },
+                layout = wibox.layout.flex.vertical,
+            }
+            --]]
+
+            --widget:set_markup(bat_now.perc)
         end
     })
 

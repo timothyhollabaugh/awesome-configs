@@ -4,3 +4,6 @@
 [submodule "lain"]
 	path = lain
 	url = https://github.com/lcpz/lain.git
+[submodule "vicious"]
+	path = vicious
+	url = https://github.com/Mic92/vicious
