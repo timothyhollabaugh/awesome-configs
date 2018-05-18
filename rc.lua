@@ -24,6 +24,7 @@ local launcher = require("launcher")
 --local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 --local volumebar_widget = require("awesome-wm-widgets.volumebar-widget.volumebar")
 local lain = require("lain")
+local vicious = require("vicious")
 
 local xrandr = require("xrandr")
 
@@ -230,8 +231,8 @@ end
 screen.connect_signal("property::geometry", set_wallpaper)
 
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("%a, %b %d   %l:%M:%S %P", 1)
-mytextclock.forced_width = 155
+mytextclock = wibox.widget.textclock("%l:%M %P", 1)
+mytextclock.forced_width = 55
 
 -- Keyboard widget
 keyboard_widget = wibox.widget {
@@ -255,68 +256,149 @@ seperator = wibox.widget{
     widget = wibox.widget.textbox
 }
 
-local cpu = lain.widget.cpu({
-        settings = function()
-            widget:set_markup("Cpu " .. cpu_now.usage)
+function pass(w, d) return d end
+
+battery = {
+    set_markup = function (self, data)
+        self.widget:get_children_by_id("icon")[1].level = data[2] / 100
+        self.widget:get_children_by_id("text")[1]:set_markup('<span color="#444444">'..data[1]..'</span>')
+    end,
+
+    widget = wibox.widget {
+        {
+
+            id = "icon",
+            level = 1.0,
+
+            fit = function (self, context, width, height)
+                return height, height
+            end,
+
+            draw = function(self, context, cr, width, height)
+
+                local cx = width/2
+                local cy = height/2
+
+                cr:set_source_rgba(1.0, 1.0, 1.0, 0.5)
+                cr:rectangle(cx-5, cy-6, 10, 14)
+                cr:rectangle(cx-2, cy-8, 4, 2)
+                cr:stroke()
+
+                local pixels = self.level * 14
+
+                cr:set_source_rgba(0.9412, 0.9412, 0.9412, 1.0)
+                cr:rectangle(cx-5, cy-6+14-pixels, 10, pixels)
+                if (self.level >= 1.0) then
+                    cr:rectangle(cx-2, cy-8, 4, 2)
+                end
+                cr:fill()
+            end,
+
+            layout = wibox.widget.base.make_widget,
+        },
+
+        {
+            {
+                id = "text",
+                widget = wibox.widget.textbox,
+                markup = "?",
+                align = "center",
+            },
+
+            widget = wibox.container.rotate,
+            direction = "east",
+        },
+
+        layout = wibox.layout.stack,
+        horizontal_offset = -1,
+        forced_width = 14
+    }
+}
+
+vicious.cache(vicious.widgets.bat)
+vicious.register(battery, vicious.widgets.bat, pass, 2, "BAT0")
+
+memory = {
+    set_markup = function (self, data)
+        self.widget:get_children_by_id("text")[1]:set_markup(string.format("%.1fGB", data[2]/1000))
+    end,
+
+    widget = wibox.widget {
+        {
+            id = "text",
+            widget = wibox.widget.textbox,
+            forced_width = 38,
+            align = "right",
+        },
+
+        layout = wibox.layout.fixed.horizontal,
+    }
+}
+
+vicious.cache(vicious.widgets.mem)
+vicious.register(memory, vicious.widgets.mem, pass, 2)
+
+cpu = {
+    set_markup = function(self, data)
+        self.widget:get_children_by_id("text")[1]:set_markup(string.format("%d%%", data[1]))
+    end,
+
+    widget = wibox.widget {
+        --{
+        --    id = "icon",
+        --    widget = wibox.widget.imagebox,
+        --    image = "/home/tim/.config/awesome/icons/cpu-frequency-indicator.svg",
+        --},
+        {
+            id = "text",
+            widget = wibox.widget.textbox,
+            forced_width = 38,
+            align = "right",
+        },
+
+        layout = wibox.layout.fixed.horizontal,
+    }
+}
+
+vicious.cache(vicious.widgets.cpu)
+vicious.register(cpu, vicious.widgets.cpu, pass, 2)
+
+mpd = {
+    set_markup = function(self, data)
+        self.widget:get_children_by_id("text")[1]:set_markup(data['{Title}'])
+
+        local state = data['{state}']
+
+        if (state == "Play") then
+            self.widget:get_children_by_id("icon")[1].image = "/home/tim/.config/awesome/icons/media/pause.svg"
+        else
+            self.widget:get_children_by_id("icon")[1].image = "/home/tim/.config/awesome/icons/media/play.svg"
         end
-    })
+    end,
 
---local battery_icon = wibox.widget.imagebox(beautiful:find_icon("24x24/devices/battery.png"))
-local battery_icon = wibox.widget.imagebox("/home/tim/.config/awesome/icons/battery/battery-empty-charging-symbolic.svg")
+    widget = wibox.widget {
+        {
+            id = "icon",
+            widget = wibox.widget.imagebox,
+            image = "/home/tim/.config/awesome/icons/media/play.svg",
+        },
+        {
+            id = "text",
+            widget = wibox.widget.textbox,
+            markup = "Unknown",
+        },
 
-local battery = lain.widget.bat({
-        battery = "BAT0",
-        timeout = 1,
-        notify = "on",
-        n_perc = {5, 15},
-        settings = function()
-            bat_notification_low_preset = {
-                title = "Battery low",
-                text = "Plug in the cable!",
-                timeout = 15,
-            }
+        layout = wibox.layout.fixed.horizontal,
+    }
+}
 
-            bat_notification_critical_preset = {
-                title = "Battery gone",
-                text = "Shutdown imminent",
-                timeout = 15,
-            }
+mpd.widget:connect_signal("button::press", function ()
+    awful.spawn.spawn("mpc toggle")
+    vicious.force({mpd})
+end)
 
-            local status = ""
-
-            if (bat_now.status == "Charging") then
-                status = "charging-"
-            else
-                status = ""
-            end
-
-            if (bat_now.perc < 5) then
-                battery_icon:set_image("/home/tim/.config/awesome/icons/battery/battery-empty-"..status.."symbolic.svg")
-            elseif (bat_now.perc < 15) then
-                battery_icon:set_image("/home/tim/.config/awesome/icons/battery/battery-caution-"..status.."symbolic.svg")
-            elseif (bat_now.perc < 50) then
-                battery_icon:set_image("/home/tim/.config/awesome/icons/battery/battery-low-"..status.."symbolic.svg")
-            elseif (bat_now.perc < 95) then
-                battery_icon:set_image("/home/tim/.config/awesome/icons/battery/battery-good-"..status.."symbolic.svg")
-            else
-                battery_icon:set_image("/home/tim/.config/awesome/icons/battery/battery-full-"..status.."symbolic.svg")
-            end
-
-            --[[
-            bat.widget = wibox.widget {
-                { value  = 0.2, color = grad1,
-                widget = wibox.widget.progressbar },
-                { value  = 0.4, color = grad2,
-                widget = wibox.widget.progressbar },
-                { value  = 0.6, color = grad3,
-                widget = wibox.widget.progressbar },
-                layout = wibox.layout.flex.vertical,
-            }
-            --]]
-
-            --widget:set_markup(bat_now.perc)
-        end
-    })
+vicious.cache(vicious.widgets.mpd)
+vicious.register(mpd, vicious.widgets.mpd, pass, 2)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
@@ -360,17 +442,16 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
             wibox.widget.systray(),
-            mytextclock,
             seperator,
-            keyboard_widget,
+            mpd.widget,
             seperator,
-            --rhythmbox_widget.rhythmbox_widget,
             cpu.widget,
             seperator,
-            volumebar_widget,
+            memory.widget,
             seperator,
-            battery_widget,
-            wibox.container.margin(wibox.widget { battery_icon, battery.widget, layout = wibox.layout.align.horizontal }, 1, 1),
+            mytextclock,
+            seperator,
+            battery.widget,
             seperator,
             s.mylayoutbox,
         },

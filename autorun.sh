@@ -16,3 +16,5 @@ run nm-applet
 
 run xautolock -locker /home/tim/.config/awesome/lock.sh -time 10
 
+run onboard
+
