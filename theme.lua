@@ -37,15 +37,18 @@ local theme = {}
 -- Global defaults {{{
 
 theme.font          = "Fira Sans Medium 10"
+--theme.font          = "Zilla Slab Medium 11"
 
 theme.bg_normal     = "#444444" -- "#444851"
-theme.bg_focus      = "#1d90cd" -- "#cccc00" -- "#ffcf44" -- "#444851"
+theme.bg_focus      = "#1a80b6" -- "#1d90cd" -- "#cccc00" -- "#ffcf44" -- "#444851"
+theme.bg_hover      = "#333333"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#ffffff"
 theme.fg_focus      = "#ffffff"
+theme.fg_hover      = "$ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#999999"
 
@@ -57,8 +60,10 @@ theme.border_marked = "#91231c"
 
 --theme.wallpaper = "/home/tim/Pictures/lnxpcs/linux-penguins-1920x1080.png"
 --theme.wallpaper = "/home/tim/Pictures/lnxpcs/arch-anatomy-1920x1080.png"
-theme.wallpaper = "/home/tim/.config/awesome/wallpapers/3d/XJu51Ly-arch-linux-wallpaper.png"
+--theme.wallpaper = "/home/tim/.config/awesome/wallpapers/3d/XJu51Ly-arch-linux-wallpaper.png"
+--theme.wallpaper = "/home/tim/.config/awesome/wallpapers/flat/ArchNumixFlatDark1080p.png"
 --theme.wallpaper = "/home/tim/.config/awesome/wallpapers/grey.png"
+theme.wallpaper = "/home/tim/.config/awesome/wallpapers/circuits/cyclone_light.png"
 
 --[[
 theme.wallpaper = function(s)
@@ -115,11 +120,11 @@ end
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(20)
-theme.menu_width  = dpi(150)
-theme.menu_bg_normal = "#ffffff88"
-theme.menu_bg_focus = "#ffffff"
-theme.menu_fg_normal = "#11111188"
-theme.menu_fg_focus = "#111111"
+theme.menu_width  = dpi(50)
+theme.menu_bg_normal = theme.bg_normal -- "#ffffff88"
+theme.menu_bg_focus = theme.bg_focus -- "#ffffff"
+theme.menu_fg_normal = theme.fg_normal -- "#11111188"
+theme.menu_fg_focus = theme.bg_normal -- "#111111"
 
 -- }}}
 
@@ -145,16 +150,18 @@ theme.layout_cornerse = themes_path.."default/layouts/cornersew.png"
 -- }}}
 
 -- Taglist {{{
+-- taglist_[bg|fg]_[focus|urgent|occupied|empty|volatile]
 
 --theme.taglist_spacing = 10
 
 theme.taglist_shape = theme.focus_bar_shape
+theme.taglist_bg_occupied = "#666666"
 
 -- }}}
 
 -- Tasklist {{{
 
-theme.tasklist_disable_icon = true
+theme.tasklist_disable_icon = false
 theme.tasklist_align = "center"
 theme.tasklist_shape = theme.focus_bar_shape
 

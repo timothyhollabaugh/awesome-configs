@@ -1,6 +1,7 @@
 
 local wibox = require("wibox")
 local awful = require("awful")
+local naughty = require("naughty")
 
 local launcher = {}
 
@@ -21,17 +22,40 @@ end)
 function launcher:show()
 
     local function callback(stdout, stderr, exitreason, exitcode)
-
-        local launch_type = stdout:sub(1, 1)
-        local selection = stdout:sub(2)
-
-        if launch_type == "a" then
-            awful.spawn.spawn(selection)
-        end
-
+        awful.spawn.spawn(stdout)
     end
 
     awful.spawn.easy_async("/home/tim/.config/awesome/launcher.sh a", callback)
+end
+
+function launcher:tags()
+
+    local tags = awful.screen.focused().tags
+
+    local function callback(stdout, stderr, exitreason, exitcode)
+
+        stdout = stdout:sub(1, -2)
+
+        local found = false
+
+        for i, tag in pairs(tags) do
+            if (tag.name == stdout) then
+                tag:view_only()
+                found = true
+            end
+        end
+
+
+        if (found == false and stdout:len() > 0) then
+            awful.tag.add(stdout, { screen = awful.screen.focused() }):view_only()
+        end
+    end
+
+    local show_tags = ""
+
+    for i, tag in pairs(tags) do
+        show_tags = show_tags.."\n"..tag.name..";;"..tag.name
+    end
 end
 
 return launcher

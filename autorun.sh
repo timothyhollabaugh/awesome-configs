@@ -18,3 +18,8 @@ run xautolock -locker /home/tim/.config/awesome/lock.sh -time 10
 
 run onboard
 
+run redshift-gtk -l 39.709904:-75.118204
+
+#run syncthing
+
+
