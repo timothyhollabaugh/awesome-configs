@@ -12,7 +12,6 @@ config.editor_cmd = config.terminal .. " -e " .. config.editor
 config.modkey = "Mod4"
 
 config.layouts = {
-    awful.layout.suit.magnifier,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -28,6 +27,7 @@ config.layouts = {
     awful.layout.suit.corner.ne,
     awful.layout.suit.corner.sw,
     awful.layout.suit.corner.se,
+    awful.layout.suit.magnifier,
 }
 
 return config
