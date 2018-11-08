@@ -2,6 +2,7 @@ local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
+local naughty = require("naughty")
 
 local vicious = require("vicious")
 local radical = require("radical")
@@ -275,7 +276,6 @@ awful.screen.connect_for_each_screen(function(s)
         },
     }
 
-    --[[
     s.sidetasklist = sidetasklist(s)
 
     s.sidebar = awful.wibar({
@@ -294,6 +294,26 @@ awful.screen.connect_for_each_screen(function(s)
         rotate_button,
         layout = wibox.layout.align.vertical,
     }
-    --]]
+
+    s.sidebar_timer = gears.timer {
+        timeout = 1,
+        autostart = true,
+        callback = function()
+            s.sidebar.opacity = 0
+            s.sidebar.width = 9
+            s.sidebar:struts({ left = 0, right = 0, bottom = 0, top = 0 })
+        end,
+        single_shot = true
+    }
+
+    s.sidebar:connect_signal("mouse::enter", function()
+        s.sidebar.width = 24
+        s.sidebar.opacity = 1
+        s.sidebar:struts({ left = 0, right = 0, bottom = 0, top = 0 })
+    end)
+
+    s.sidebar:connect_signal("mouse::leave", function()
+        s.sidebar_timer:start()
+    end)
 
 end)
